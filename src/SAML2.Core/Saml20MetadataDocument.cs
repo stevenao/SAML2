@@ -707,9 +707,9 @@ namespace SAML2
             {
                 entity.Organization = new Schema.Metadata.Organization
                                           {
-                                              OrganizationName = new[] { new LocalizedName { Value = config.Metadata.Organization.Name } },
-                                              OrganizationDisplayName = new[] { new LocalizedName { Value = config.Metadata.Organization.DisplayName } },
-                                              OrganizationURL = new[] { new LocalizedURI { Value = config.Metadata.Organization.Url } }
+                                              OrganizationName = new[] { new LocalizedName { Value = config.Metadata.Organization.Name, Language = config.Metadata.DefaultLanguage.TwoLetterISOLanguageName } },
+											  OrganizationDisplayName = new[] { new LocalizedName { Value = config.Metadata.Organization.DisplayName, Language = config.Metadata.DefaultLanguage.TwoLetterISOLanguageName } },
+											  OrganizationURL = new[] { new LocalizedURI { Value = config.Metadata.Organization.Url, Language = config.Metadata.DefaultLanguage.TwoLetterISOLanguageName } }
                                           };
             }
 

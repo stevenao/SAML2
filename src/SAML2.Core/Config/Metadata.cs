@@ -1,4 +1,6 @@
-﻿using SAML2.Schema.Metadata;
+﻿using System.Globalization;
+using System.Threading;
+using SAML2.Schema.Metadata;
 using System.Collections.Generic;
 using System.Configuration;
 
@@ -46,6 +48,9 @@ namespace SAML2.Config
             RequestedAttributes = new List<Attribute>();
             //Organization = new Organization(); // The Organization element appears to break metaadata (missing required lang attribute)
             Contacts = new List<Contact>();
+			DefaultLanguage = Thread.CurrentThread.CurrentCulture;
         }
+
+	    public CultureInfo DefaultLanguage { get; set; }
     }
 }
