@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Owin.Logging;
 using Microsoft.Owin.Security.Infrastructure;
@@ -88,7 +89,7 @@ namespace Owin.Security.Saml
             }
 
             AuthenticationResponseChallenge challenge = Helper.LookupChallenge(Options.AuthenticationType, Options.AuthenticationMode);
-            if (challenge == null)
+            if (challenge == null || !challenge.AuthenticationTypes.Contains( Options.AuthenticationType ))
             {
                 return;
             }
