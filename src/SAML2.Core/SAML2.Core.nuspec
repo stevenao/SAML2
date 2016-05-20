@@ -12,5 +12,8 @@
     <releaseNotes>Working SP-Initiated requests against testshib.org (redirect binding)</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>SAML2 Core library</tags>
+	<files>
+		<file src="bin\$configuration$\$id$.pdb" target="lib\net45\" />
+	</files>
   </metadata>
 </package>
