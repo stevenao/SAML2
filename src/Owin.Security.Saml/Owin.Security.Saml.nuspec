@@ -11,12 +11,12 @@
     <description>$description$</description>
     <releaseNotes>Working SP-Initiated requests against testshib.org (redirect binding)</releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <tags>SAML2 Owin library</tags>
-    <files>
-		<file src="bin\$configuration$\$id$.pdb" target="lib\net45\" />
-	</files>
+    <tags>SAML2 Owin library</tags>   
 	<dependencies>
       <dependency id="Saml2.Core" version="0.9.0.0" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="bin\$configuration$\$id$.pdb" target="lib\net45\" />
+  </files>
 </package>
