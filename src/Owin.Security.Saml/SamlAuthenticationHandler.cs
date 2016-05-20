@@ -89,7 +89,7 @@ namespace Owin.Security.Saml
             }
 
             AuthenticationResponseChallenge challenge = Helper.LookupChallenge(Options.AuthenticationType, Options.AuthenticationMode);
-            if (challenge == null || !challenge.AuthenticationTypes.Contains( Options.AuthenticationType ))
+            if (challenge == null || challenge.AuthenticationTypes == null || challenge.AuthenticationTypes.Contains(Options.AuthenticationType))
             {
                 return;
             }
